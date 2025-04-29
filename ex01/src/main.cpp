@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/27 05:43:37 by tamatsuu          #+#    #+#             */
-/*   Updated: 2025/04/29 16:08:57 by tamatsuu         ###   ########.fr       */
+/*   Created: 2025/04/29 17:08:36 by tamatsuu          #+#    #+#             */
+/*   Updated: 2025/04/29 17:10:10 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "PhoneBookApp.hpp"
 
-char	*toupper_char(char *str)
+int main()
 {
-	for (int i = 0; str[i]; i++)
-		str[i] = std::toupper(static_cast<unsigned int>(str[i]));
-	return (str);
-}
-
-int	main(int argc, char* argv[])
-{
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{	
-		for (int i = 1; i < argc; i++)
-			std::cout << toupper_char(argv[i]);
-		std::cout << std::endl;
-	}
+	PhoneBookApp app;
+	app.run();
 	return (0);
 }

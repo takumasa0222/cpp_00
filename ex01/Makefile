@@ -6,7 +6,7 @@
 #    By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 00:43:14 by tamatsuu          #+#    #+#              #
-#    Updated: 2025/04/27 06:01:00 by tamatsuu         ###   ########.fr        #
+#    Updated: 2025/04/29 22:40:29 by tamatsuu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,17 +14,23 @@ NAME = phonebook
 CC = c++
 INCLUDES = -I includes
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS    = PhoneBook.cpp
+SRCS    = 	src/PhoneBook.cpp \
+			src/main.cpp \
+			src/Contact.cpp \
+			src/PhoneBookApp.cpp \
+			src/StringHelper.cpp
+			
 OBJS    = $(SRCS:.cpp=.o)
 LIBDIR  = 
 LIBS    = 
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $<  $(LIBDIR) $(LIBS) -o $@
+	$(CC) $(CFLAGS) $(OBJS) $(LIBDIR) $(LIBS) -o $@
 
-$(OBJS): $(SRCS)
+
+%.o: %.cpp
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
-
+	
 all: $(NAME)
 
 clean: 
