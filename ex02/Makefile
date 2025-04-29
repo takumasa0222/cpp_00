@@ -3,19 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+         #
+#    By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 00:43:14 by tamatsuu          #+#    #+#              #
-#    Updated: 2025/04/29 23:26:49 by tamatsuu         ###   ########.fr        #
+#    Updated: 2025/04/30 03:39:48 by tamatsuu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = phonebook
+NAME = account
 CC = c++
-INCLUDES = -I includes
+INCLUDES = -I 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS    = 	Account.cpp \
-			test.cpp 
+			tests.cpp 
 OBJS    = $(SRCS:.cpp=.o)
 LIBDIR  = 
 LIBS    = 
@@ -23,9 +23,8 @@ LIBS    =
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBDIR) $(LIBS) -o $@
 
-
 %.o: %.cpp
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 	
 all: $(NAME)
 
@@ -37,9 +36,5 @@ fclean: clean
 
 re: fclean all
 
-test: all
-	./megaphone
-	./megaphone "shhhhh... I think the students are asleep..."
-	./megaphone  Damnit " ! " "Sorry students, I thought this thing was off."
 
 .PHONY: all clean fclean re 

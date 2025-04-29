@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBookApp.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 17:10:36 by tamatsuu          #+#    #+#             */
-/*   Updated: 2025/04/29 23:10:56 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2025/04/30 03:30:33 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ bool PhoneBookApp::handle_input(std::string input)
 
 void PhoneBookApp::show_input_err_message(std::string err)
 {
-	std::cerr << err << std::endl; 
+	std::cout << err << std::endl; 
 }
 
 bool PhoneBookApp::is_valid_index(std::string input, int index)

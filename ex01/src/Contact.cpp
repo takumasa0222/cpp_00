@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 14:03:08 by tamatsuu          #+#    #+#             */
-/*   Updated: 2025/04/29 23:07:05 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2025/04/30 03:30:21 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,14 +93,14 @@ std::string Contact::handle_input_for_contact(ContactField type, bool *is_valid)
 	{
 		if (!is_valid_phone_num(input))
 		{
-			std::cerr << INVALID_PHONE_NUM << std::endl;
+			std::cout << INVALID_PHONE_NUM << std::endl;
 			return "";
 		}
 		*is_valid = true;
 		return input;
 	}
 	else {
-		std::cerr << INPUT_CONTACT_ERR << std::endl;
+		std::cout << INPUT_CONTACT_ERR << std::endl;
 		return "";
 	}
 }

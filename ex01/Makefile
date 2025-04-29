@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+         #
+#    By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/27 00:43:14 by tamatsuu          #+#    #+#              #
-#    Updated: 2025/04/29 22:40:29 by tamatsuu         ###   ########.fr        #
+#    Updated: 2025/04/30 03:24:18 by tamatsuu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,5 @@ fclean: clean
 
 re: fclean all
 
-test: all
-	./megaphone
-	./megaphone "shhhhh... I think the students are asleep..."
-	./megaphone  Damnit " ! " "Sorry students, I thought this thing was off."
 
 .PHONY: all clean fclean re 
