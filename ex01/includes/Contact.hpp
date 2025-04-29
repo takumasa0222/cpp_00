@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:34:54 by tamatsuu          #+#    #+#             */
-/*   Updated: 2025/04/29 23:07:21 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2025/04/29 23:14:23 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ enum ContactField {
     NICKNAME,
     PHONE_NUMBER,
     DARKEST_SECRET,
-    FIELD_COUNT,
-	INDEX
+    FIELD_COUNT
 };
 
 class Contact {
