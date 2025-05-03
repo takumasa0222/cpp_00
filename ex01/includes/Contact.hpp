@@ -6,7 +6,7 @@
 /*   By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 15:34:54 by tamatsuu          #+#    #+#             */
-/*   Updated: 2025/04/29 23:14:23 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2025/05/03 15:01:51 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "StringHelper.hpp"
 
 #define INPUT_CONTACT_ERR "Input cannot be empty"
-#define INVALID_PHONE_NUM "Phone numbers can only contain digits and the '+' sign. Please try again."
+#define INVALID_PHONE_NUM "Number of digit should be less than 15. Phone numbers can only contain digits and the '+' sign. Please try again."
 #define MAX_PHONE_LEN 15
 enum ContactField {
     FIRST_NAME,

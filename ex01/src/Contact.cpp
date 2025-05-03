@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tamatsuu <tamatsuu@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tamatsuu <tamatsuu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 14:03:08 by tamatsuu          #+#    #+#             */
-/*   Updated: 2025/04/30 03:30:21 by tamatsuu         ###   ########.fr       */
+/*   Updated: 2025/05/03 15:00:46 by tamatsuu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,7 @@ void Contact::set_field_value(ContactField type, std::string input)
 bool	Contact::is_valid_phone_num(std::string &input)
 {
 	if (MAX_PHONE_LEN < input.length())
+		return (false);
 	for (std::string::size_type i = 0; i < input.length(); i++)
 	{
 		if (i == 0 && (static_cast<unsigned int>(input[i])) == '+')
